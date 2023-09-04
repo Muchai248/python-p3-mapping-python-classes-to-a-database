@@ -33,3 +33,8 @@ def create(cls, name, album):
         song.save()
         return song
 
+
+@classmethod
+def new_from_db(cls, row):
+    song = cls(row[1]), row[2]
+    song.id =row[0]
